@@ -1,0 +1,38 @@
+//ForMyDudu
+
+#include <LiquidCrystal.h>
+
+int seconds = 0;
+
+LiquidCrystal lcd_1(12, 11, 5, 4, 3, 2);
+
+void setup()
+{
+  lcd_1.begin(16, 2); // Set up the number of columns and rows on the LCD.
+}
+
+void loop()
+{  
+  // set the cursor to column 0, line 0
+   lcd_1.setCursor(0, 0);
+  lcd_1.print("i love u");
+  // set the cursor to column 0, line 1
+  lcd_1.setCursor(0, 1);
+  lcd_1.print("my dudu");
+  
+  delay(3000); // Wait for 3000 millisecond(s) = 3 seconds
+  
+  lcd_1.clear();// Erase everything
+  
+  // set the cursor to column 0, line 0
+  lcd_1.setCursor(0, 0);
+ 
+  lcd_1.print("Para: ");
+  // set the cursor to column 0, line 0
+  lcd_1.setCursor(0, 1);
+  lcd_1.print("Jesus Ojeda");
+   
+  delay(5000); // Wait for 5000 millisecond(s) = 5 seconds
+  
+  lcd_1.clear(); // Erase everything
+  
